@@ -1,2 +1,2 @@
 // license
-export const shebang_regex = /^#!(.*)/;
+export const shebang_regex = /^#!(.*)/
