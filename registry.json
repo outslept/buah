@@ -1,0 +1,26 @@
+{
+  "is-npm": {
+    "files": [
+      {
+        "path": "index.ts",
+        "content": "import process from 'node:process';\r\n\r\nconst packageJson = process.env.npm_package_json;\r\nconst userAgent = process.env.npm_config_user_agent;\r\n\r\nexport const isNpm = Boolean(userAgent?.startsWith('npm')) || Boolean(packageJson?.endsWith('package.json'));\r\nexport const isYarn = Boolean(userAgent?.startsWith('yarn'));\r\nexport const isPnpm = Boolean(userAgent?.startsWith('pnpm'));\r\nexport const isBun = Boolean(userAgent?.startsWith('bun'));\r\nexport const isNpmOrYarn = isNpm || isYarn;\r\nexport const isPackageManager = isNpm || isYarn || isPnpm || isBun;\r\n"
+      }
+    ]
+  },
+  "is-windows": {
+    "files": [
+      {
+        "path": "index.ts",
+        "content": "/*!\r\n * is-windows <https://github.com/jonschlinkert/is-windows>\r\n *\r\n * Copyright © 2015-2018, Jon Schlinkert.\r\n * Released under the MIT License.\r\n */\r\n\r\n(function(factory) {\r\n  if (exports && typeof exports === 'object' && typeof module !== 'undefined') {\r\n    module.exports = factory();\r\n  } else if (typeof define === 'function' && define.amd) {\r\n    define([], factory);\r\n  } else if (typeof window !== 'undefined') {\r\n    window.isWindows = factory();\r\n  } else if (typeof global !== 'undefined') {\r\n    global.isWindows = factory();\r\n  } else if (typeof self !== 'undefined') {\r\n    self.isWindows = factory();\r\n  } else {\r\n    this.isWindows = factory();\r\n  }\r\n})(function() {\r\n  'use strict';\r\n  return function isWindows() {\r\n    return process && (process.platform === 'win32' || /^(msys|cygwin)$/.test(process.env.OSTYPE));\r\n  };\r\n});\r\n"
+      }
+    ]
+  },
+  "shebang-regex": {
+    "files": [
+      {
+        "path": "index.ts",
+        "content": "// license\r\nexport const shebang_regex = /^#!(.*)/;\r\n"
+      }
+    ]
+  }
+}
