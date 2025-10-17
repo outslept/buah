@@ -1,6 +1,7 @@
 {
   "type": "module",
   "scripts": {
+    "dev": "tsx src/cli.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -9,6 +10,7 @@
     "@types/node": "^24.8.1",
     "eslint": "^9.38.0",
     "neostandard": "^0.12.2",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
   "dependencies": {

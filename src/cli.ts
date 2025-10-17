@@ -117,7 +117,7 @@ if (cmd === 'build') cmd_build()
 else if (cmd === 'add') cmd_add()
 else {
   console.log('Usage:')
-  console.log('  bun src/cli.ts build   # builds ./registry.json from ./lib/<snippet>/*')
-  console.log('  bun src/cli.ts add     # installs to a directory you pick with optional filename override')
+  console.log('  tsx src/cli.ts build   # builds ./registry.json from ./lib/<snippet>/*')
+  console.log('  tsx src/cli.ts add     # installs to a directory you pick with optional filename override')
   process.exit(1)
 }
